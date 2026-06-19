@@ -181,7 +181,7 @@ header.site-header{
 .mobile-panel.open{transform:translateX(0);}
 .mobile-panel-head{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);padding:0 24px;border-bottom:1px solid var(--border);}
 .mobile-panel-body{padding:8px 24px 40px;}
-.mobile-panel a.top-link{
+.mobile-panel a.top-link, .mobile-panel button.top-link{
   display:flex;align-items:center;justify-content:space-between;
   padding:16px 0;font-weight:900;font-size:1.15rem;border-bottom:1px solid var(--border);
 }
@@ -491,6 +491,25 @@ footer.site-footer{background:var(--ink);color:#cfd2d8;padding-top:72px;}
 .footer-bottom a{color:#8C8F99;}
 .footer-bottom a:hover{color:#fff;}
 .footer-legal{display:flex;gap:18px;flex-wrap:wrap;}
+
+/* ---------- anchor target highlight (deep-link from hub pages) ---------- */
+.team-card:target,.mcp-card:target{
+  outline:3px solid var(--hub-color,var(--c-blue));
+  outline-offset:4px;border-radius:var(--radius-lg);
+  animation:targetPulse 1.8s ease 1;
+}
+@keyframes targetPulse{
+  0%{box-shadow:0 0 0 0 rgba(3,126,243,.35);}
+  100%{box-shadow:0 0 0 14px rgba(3,126,243,0);}
+}
+.hub-note{
+  display:flex;align-items:center;gap:10px;background:var(--bg-soft);
+  border-radius:var(--radius-sm);padding:14px 18px;font-size:.92rem;font-weight:700;margin-top:18px;
+}
+.hub-note svg{width:18px;height:18px;flex-shrink:0;color:var(--c-blue);}
+.hub-note a{color:var(--c-blue);text-decoration:underline;}
+#hubPreselectNote{display:none;}
+#hubPreselectNote.show{display:flex;}
 
 /* ---------- back to top ---------- */
 .back-top{
