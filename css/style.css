@@ -615,3 +615,30 @@ footer.site-footer{background:var(--ink);color:#cfd2d8;padding-top:72px;}
   .stats-card{grid-template-columns:1fr 1fr;}
   .logo-grid{grid-template-columns:1fr 1fr;}
 }
+.mcp-card .social{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:18px;
+}
+
+.mcp-card .social a{
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#f4f6fb;
+  color:#52565e;
+  transition:.25s;
+}
+
+.mcp-card .social a:hover{
+  background:#037EF3;
+  color:#fff;
+}
+.team-card .social a:hover{
+  background:#037EF3;
+  color:#fff;
+}
