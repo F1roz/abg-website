@@ -108,6 +108,26 @@ document.addEventListener('DOMContentLoaded', function () {
     reveals.forEach(function (r) { revealObserver.observe(r); });
   }
 
+  /* ---------- pre-select hub from ?hub= URL param (used by "Apply to this hub" links) ---------- */
+  var hubSelect = document.getElementById('fhub');
+  if (hubSelect) {
+    var params = new URLSearchParams(window.location.search);
+    var hubParam = params.get('hub');
+    var hubNames = {
+      ogx: 'oGX — Outgoing Exchange', icx: 'iCX — Incoming Exchange', mx: 'MX — Member Experience',
+      ewa: 'EwA — Engage with AIESEC', finance: 'Finance', mkt: 'Marketing', bd: 'Business Development'
+    };
+    if (hubParam && hubNames[hubParam]) {
+      hubSelect.value = hubParam;
+      var note = document.getElementById('hubPreselectNote');
+      if (note) {
+        note.classList.add('show');
+        var nameSpan = note.querySelector('[data-hub-name]');
+        if (nameSpan) nameSpan.textContent = hubNames[hubParam];
+      }
+    }
+  }
+
   /* ---------- back to top ---------- */
   var backTop = document.querySelector('.back-top');
   if (backTop) {

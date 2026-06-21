@@ -511,6 +511,50 @@ footer.site-footer{background:var(--ink);color:#cfd2d8;padding-top:72px;}
 #hubPreselectNote{display:none;}
 #hubPreselectNote.show{display:flex;}
 
+/* ---------- vertical timeline (history page) ---------- */
+.vtimeline{position:relative;max-width:760px;margin:0 auto;padding-left:0;}
+.vtimeline::before{content:'';position:absolute;left:27px;top:6px;bottom:6px;width:3px;background:var(--gray-150);}
+.vt-item{position:relative;padding-left:74px;margin-bottom:42px;}
+.vt-item:last-child{margin-bottom:0;}
+.vt-year{
+  position:absolute;left:0;top:0;width:56px;height:56px;border-radius:50%;
+  background:var(--c-blue);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:.78rem;text-align:center;line-height:1.05;box-shadow:0 0 0 5px #fff,0 4px 10px rgba(27,30,38,.12);
+  z-index:2;
+}
+.vt-item h4{margin-bottom:6px;}
+.vt-item p{color:var(--text-muted);margin:0;}
+.vt-tag{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--c-blue);margin-bottom:4px;}
+
+/* ---------- alumni / past-MC archive ---------- */
+.term-accordion .accordion-head{font-size:1.08rem;}
+.term-meta{display:flex;align-items:center;gap:10px;}
+.term-badge{
+  font-size:.74rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em;
+  background:var(--bg-soft);color:var(--c-blue);padding:5px 12px;border-radius:99px;
+}
+.alumni-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:6px;}
+.alumni-row{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:14px 16px;background:var(--bg-soft);border-radius:var(--radius-sm);
+}
+.alumni-row .who{display:flex;flex-direction:column;gap:2px;}
+.alumni-row .who a.aname{font-weight:900;font-size:.95rem;color:var(--ink);}
+.alumni-row .who a.aname:hover{color:var(--c-blue);}
+.alumni-row .who .arole{font-size:.8rem;color:var(--text-muted);font-weight:700;}
+.alumni-row .li-link{
+  width:32px;height:32px;border-radius:50%;background:#fff;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.15s;
+}
+.alumni-row .li-link:hover{background:#0A66C2;border-color:#0A66C2;}
+.alumni-row .li-link:hover svg{color:#fff;}
+.alumni-row .li-link svg{width:15px;height:15px;color:#0A66C2;}
+.mcp-row{grid-column:1/-1;background:var(--ink);}
+.mcp-row .who a.aname{color:#fff;}
+.mcp-row .who .arole{color:#B7BBC4;}
+.mcp-row .li-link{background:rgba(255,255,255,.12);border-color:transparent;}
+.mcp-row .li-link svg{color:#fff;}
+
 /* ---------- back to top ---------- */
 .back-top{
   position:fixed;bottom:26px;right:26px;width:48px;height:48px;border-radius:50%;
@@ -560,6 +604,10 @@ footer.site-footer{background:var(--ink);color:#cfd2d8;padding-top:72px;}
   .stats-card{grid-template-columns:1fr 1fr;}
   .post-body{font-size:1rem;}
   .event-detail-card{position:static;}
+  .alumni-grid{grid-template-columns:1fr;}
+  .vtimeline::before{left:21px;}
+  .vt-item{padding-left:58px;}
+  .vt-year{width:44px;height:44px;font-size:.68rem;}
 }
 @media (max-width:480px){
   h1{font-size:2.1rem;}

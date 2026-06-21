@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" width="760" height="560" role="img" aria-label="Placeholder image: 1997 founding team photo (if available)">
+  <rect x="0" y="0" width="760" height="560" fill="#EAF3DE"/>
+  <rect x="6" y="6" width="748" height="548" fill="none" stroke="#97C459" stroke-width="2.5" stroke-dasharray="9 7" rx="14"/>
+  <g transform="translate(380.0,266.0)" opacity="0.55">
+  <rect x="-26" y="-18" width="52" height="38" rx="6" fill="none" stroke="#00C16E" stroke-width="2.4"/>
+  <rect x="-10" y="-26" width="20" height="10" rx="3" fill="none" stroke="#00C16E" stroke-width="2.4"/>
+  <circle cx="0" cy="1" r="11" fill="none" stroke="#00C16E" stroke-width="2.4"/>
+  <circle cx="0" cy="1" r="4.2" fill="#00C16E"/>
+</g>
+  <text x="380.0" y="530" text-anchor="middle" font-family="Lato, Arial, sans-serif" font-size="16" font-weight="700" fill="#00C16E">1997 founding team photo (if available)</text>
+  <text x="380.0" y="548" text-anchor="middle" font-family="Lato, Arial, sans-serif" font-size="11" fill="#00C16E" opacity="0.7">Replace this image</text>
+</svg>
